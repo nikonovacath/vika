@@ -248,6 +248,8 @@ nav.mobile-open .mobile-menu {
 }
 .btn-outline:hover { border-color: var(--charcoal); }
 
+.btn-text-mobile { display: none; }
+
 .hero-right {
   position: relative;
   overflow: hidden;
@@ -936,7 +938,7 @@ footer {
   .mobile-menu { top: 80px; }
   .hero { height: auto; max-height: none; padding: 0 24px; }
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-left { padding: 120px 24px 60px; }
+  .hero-left { padding: 120px 0 60px; }
   .hero-right { height: 70vw; }
   .photo-placeholder { height: 70vw; }
   #about { padding: 80px 24px 80px; }
@@ -950,8 +952,14 @@ footer {
   .pricing-card { grid-template-columns: 1fr; }
   .pricing-col--right::before { display: none; }
   .pricing-col--right { border-top: 1px solid var(--border); }
+  .quote-text { font-size: 24px; }
   footer { padding: 60px 24px 32px; }
   .footer-top { flex-direction: column; gap: 32px; }
   .footer-social { align-items: flex-start; }
   .popup { padding: 32px 24px; }
+}
+
+@media (max-width: 500px) {
+  #pricing .btn-text-desktop { display: none; }
+  #pricing .btn-text-mobile { display: inline; }
 }
