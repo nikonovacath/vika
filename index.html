@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Виктория Анисимова — психолог</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">В. Анисимова</a>
+    <ul class="nav-links">
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#services">С чем работаю</a></li>
+      <li><a href="#pricing">Стоимость</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#" class="open-popup nav-cta">Записаться на консультацию</a></li>
+    </ul>
+    <button class="nav-burger" id="nav-burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="mobile-menu-links">
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#services">С чем работаю</a></li>
+      <li><a href="#pricing">Стоимость</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#" class="open-popup">Записаться на консультацию</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Онлайн-консультации · Полимодальный подход</div>
+      <h1 class="hero-title">
+        Виктория Анисимова —<br>
+        <em>дипломированный психолог</em><br>
+        в области клинической и
+        консультативной психологии
+      </h1>
+      <p class="hero-sub">
+        Отношения, самооценка, кризисы, эмоциональное выгорание и поиск опоры.
+      </p>
+      <div class="hero-actions">
+        <a href="#" class="btn-primary open-popup">Записаться на консультацию</a>
+        <a href="#" class="btn-outline open-popup">Задать вопрос</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="img-1.jpg" alt="Виктория Анисимова" class="hero-photo">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div style="max-width:1200px; margin:0 auto;">
+    <p class="section-label reveal">Знакомство</p>
+    <h2 class="section-title reveal">Обо мне</h2>
+
+    <div class="about-item reveal">
+      <div class="about-label">Образование</div>
+      <div class="about-text">
+        <p>Магистрант ММУ «Клиническая и консультативная психология»</p>
+        <p>Повышение квалификации — Институт прикладной психологии «Психологическое консультирование: современные методы и технологии консультативного взаимодействия с клиентами»</p>
+        <p>Профессиональная переподготовка ПОАНО «НУСТ» по программе «Консультативная психология»</p>
+      </div>
+    </div>
+
+    <div class="about-item reveal" id="approach">
+      <div class="about-label">Подход</div>
+      <div class="about-text">
+        <p>В своей работе я использую полимодальный подход, который объединяет в себе самые эффективные техники из различных направлений психотерапии.</p>
+        <p>В процессе работы я создаю безопасное пространство для открытого диалога, помогаю распутать узлы эмоциональных и психологических проблем.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-section">
+  <div class="quote-inner">
+    <div class="quote-line"></div>
+    <p class="quote-text reveal">
+      Моя цель — не только устранить симптомы, но и помочь обрести гармонию, уверенность и внутреннюю силу для развития и роста.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-inner">
+    <p class="section-label reveal">Направления работы</p>
+    <h2 class="section-title reveal">С чем я работаю</h2>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <img src="relationships.svg" alt="Отношения">
+        </div>
+        <h3 class="service-title">Отношения</h3>
+        <p class="service-desc">Сложности в отношениях, расставания, повторяющиеся сценарии, эмоциональная зависимость и поиск здорового взаимодействия.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <img src="selfworth.svg" alt="Самооценка и границы">
+        </div>
+        <h3 class="service-title">Самооценка и границы</h3>
+        <p class="service-desc">Неуверенность в себе, трудности с принятием решений, выстраивание личных границ и развитие внутренней опоры.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <img src="state.svg" alt="Состояние">
+        </div>
+        <h3 class="service-title">Состояние</h3>
+        <p class="service-desc">Тревога, апатия, внутреннее напряжение, чувство пустоты, потеря интереса и эмоциональное выгорание.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <img src="life.svg" alt="Жизненные этапы">
+        </div>
+        <h3 class="service-title">Жизненные этапы</h3>
+        <p class="service-desc">Кризисы, переходные периоды, поиск себя, изменения в жизни и адаптация к новым обстоятельствам.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="pricing-inner">
+    <p class="section-label reveal">Стоимость</p>
+    <h2 class="section-title reveal">Консультация</h2>
+    <div class="pricing-card reveal">
+      <div class="pricing-col pricing-col--left">
+        <div class="pricing-tag">Консультация</div>
+        <div class="pricing-price">3500 <span>р.</span></div>
+        <div class="pricing-caption">Стоимость одной сессии</div>
+        <a href="#" class="btn-primary open-popup">Записаться на консультацию</a>
+      </div>
+      <div class="pricing-col pricing-col--right">
+        <div class="pricing-includes">Что включено</div>
+        <div class="pricing-feature">
+          <span class="pricing-feature-dot"></span>Онлайн-формат
+        </div>
+        <div class="pricing-feature">
+          <span class="pricing-feature-dot"></span>50 минут
+        </div>
+        <div class="pricing-feature">
+          <span class="pricing-feature-dot"></span>Индивидуальная сессия
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-inner">
+    <p class="section-label reveal">FAQ</p>
+    <h2 class="section-title reveal">Частые вопросы</h2>
+    <div class="faq-list">
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Как проходит первая консультация?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <p>Первая встреча — знакомство. Я узнаю о вашем запросе, вы можете задать любые вопросы обо мне и моём подходе. Вместе мы определим, комфортно ли нам работать друг с другом и наметим направление.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Сколько сессий потребуется?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <p>Зависит от запроса. Разовые консультации помогают разобраться в конкретной ситуации. Для глубокой работы — обычно от 8 до 20 встреч. Конкретные сроки обсуждаем после первой сессии.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Всё останется конфиденциально?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <p>Да, всё что вы рассказываете — строго между нами. Я придерживаюсь профессионального кодекса этики психолога.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Как проходят онлайн-консультации, это так же эффективно?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <p>Онлайн-формат полноценно заменяет очный приём. Вы можете находиться в любом месте где вам комфортно — дома, в тихом кафе. Связь через видеозвонок, качество работы от этого не страдает.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Я никогда не был у психолога, с чего начать?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <p>Просто напишите мне. Не нужно заранее чётко формулировать запрос или готовиться — разобраться в том, с чем вы пришли, это и есть часть нашей работы.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="faq-cta">
+      <a href="#" class="btn-outline open-popup">Задать вопрос</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacts">
+  <div class="footer-top">
+    <div>
+      <div class="footer-name">Виктория Анисимова</div>
+      <div class="footer-tagline">Клиническая и консультативная психология</div>
+    </div>
+    <div class="footer-social">
+      <a href="#" class="footer-social-link">
+        <img src="tg.svg" alt="Telegram"><span>Telegram</span>
+      </a>
+      <a href="#" class="footer-social-link">
+        <img src="yt.svg" alt="YouTube"><span>YouTube</span>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Виктория Анисимова</span>
+    <span>Онлайн-консультации</span>
+  </div>
+</footer>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="popup">
+  <div class="popup">
+    <button class="popup-close" id="popup-close" aria-label="Закрыть">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="1" y1="1" x2="17" y2="17"/><line x1="17" y1="1" x2="1" y2="17"/>
+      </svg>
+    </button>
+
+    <div class="popup-form" id="popup-form">
+      <h3 class="popup-title">Записаться на консультацию</h3>
+
+      <div class="popup-field">
+        <label class="popup-label">Имя</label>
+        <input type="text" class="popup-input" id="field-name" placeholder="Ваше имя">
+        <div class="popup-error">Заполните поле</div>
+      </div>
+
+      <div class="popup-field popup-field--contact-method">
+        <label class="popup-label">Как вам удобно связаться?</label>
+        <div class="popup-toggles">
+          <button class="popup-toggle active" data-value="telegram">Telegram</button>
+          <button class="popup-toggle" data-value="whatsapp">WhatsApp</button>
+          <button class="popup-toggle" data-value="phone">Позвонить</button>
+        </div>
+      </div>
+
+      <div class="popup-field popup-contact-field" id="contact-field" style="display:block;">
+        <input type="text" class="popup-input" id="field-contact" placeholder="@username">
+        <div class="popup-error">Заполните поле</div>
+      </div>
+
+      <div class="popup-field">
+        <label class="popup-label">С чем хотите поработать? <span class="popup-optional">необязательно</span></label>
+        <textarea class="popup-input popup-textarea" id="field-topic" placeholder="Опишите вкратце ваш запрос"></textarea>
+      </div>
+
+      <button class="btn-primary popup-submit" id="popup-submit">Отправить</button>
+    </div>
+
+    <div class="popup-success" id="popup-success">
+      <div class="popup-success-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <h3 class="popup-title">Спасибо!</h3>
+      <p class="popup-success-text">Ваша заявка отправлена. Я свяжусь с вами по указанным контактам в течение одного рабочего дня.</p>
+      <button class="btn-outline popup-ok" id="popup-ok">Ок, закрыть</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
