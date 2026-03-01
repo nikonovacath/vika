@@ -766,6 +766,9 @@ nav.mobile-open .mobile-menu {
 
 .faq-cta {
   margin-top: 40px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 /* NAV CTA */
