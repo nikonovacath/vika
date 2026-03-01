@@ -37,6 +37,7 @@ async function handler(req, res) {
   const body = normalizeBody(req.body);
   const name = String(body.name || "").trim();
   const contact = String(body.contact || "").trim();
+  const topic = String(body.topic || "").trim();
   const contactMethod = String(body.contactMethod || "").trim();
 
   if (!name || !contact) {
@@ -53,6 +54,10 @@ async function handler(req, res) {
     `Контакт: ${escapeHtml(contact)}`,
     `Способ связи: ${escapeHtml(contactMethod || "не указан")}`,
   ];
+
+  if (topic) {
+    messageLines.push(`С чем хотите поработать: ${escapeHtml(topic)}`);
+  }
 
   const text = messageLines.join("\n");
   const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
