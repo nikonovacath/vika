@@ -80,6 +80,11 @@ function clearPopupErrors() {
   [nameInput, contactInput].forEach(input => clearFieldError(input));
 }
 
+function getActiveContactMethod() {
+  const activeToggle = document.querySelector('.popup-toggle.active');
+  return activeToggle ? activeToggle.dataset.value : defaultContactMethod;
+}
+
 function openPopup() {
   resetPopupFormState();
   popupOverlay.classList.add('open');
@@ -117,7 +122,7 @@ resetPopupFormState();
 nameInput.addEventListener('input', () => clearFieldError(nameInput));
 contactInput.addEventListener('input', () => clearFieldError(contactInput));
 
-popupSubmitButton.addEventListener('click', () => {
+popupSubmitButton.addEventListener('click', async () => {
   const isNameEmpty = !nameInput.value.trim();
   const isContactEmpty = !contactInput.value.trim();
 
@@ -129,8 +134,34 @@ popupSubmitButton.addEventListener('click', () => {
 
   if (isNameEmpty || isContactEmpty) return;
 
-  popupForm.style.display = 'none';
-  popupSuccess.style.display = 'block';
+  const originalButtonText = popupSubmitButton.textContent;
+  popupSubmitButton.disabled = true;
+  popupSubmitButton.textContent = 'Отправляем...';
+
+  try {
+    const response = await fetch('/api/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: nameInput.value.trim(),
+        contact: contactInput.value.trim(),
+        contactMethod: getActiveContactMethod(),
+      }),
+    });
+
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || result.ok !== true) {
+      throw new Error('Request failed');
+    }
+
+    popupForm.style.display = 'none';
+    popupSuccess.style.display = 'block';
+  } catch (error) {
+    alert('Не удалось отправить заявку. Попробуйте ещё раз.');
+  } finally {
+    popupSubmitButton.disabled = false;
+    popupSubmitButton.textContent = originalButtonText;
+  }
 });
 
 // FAQ accordion
