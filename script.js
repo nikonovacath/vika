@@ -50,6 +50,7 @@ const popupSuccess = document.getElementById('popup-success');
 const nameInput = document.getElementById('field-name');
 const contactField = document.getElementById('contact-field');
 const contactInput = document.getElementById('field-contact');
+const topicInput = document.getElementById('field-topic');
 const popupSubmitButton = document.getElementById('popup-submit');
 const defaultContactMethod = 'telegram';
 
@@ -145,6 +146,7 @@ popupSubmitButton.addEventListener('click', async () => {
       body: JSON.stringify({
         name: nameInput.value.trim(),
         contact: contactInput.value.trim(),
+        topic: topicInput ? topicInput.value.trim() : '',
         contactMethod: getActiveContactMethod(),
       }),
     });
