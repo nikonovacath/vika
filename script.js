@@ -58,7 +58,7 @@ function setContactMethod(method) {
     t.classList.toggle('active', t.dataset.value === method);
   });
   contactField.style.display = 'block';
-  contactInput.placeholder = method === 'phone' ? 'Номер телефона' : '@username';
+  contactInput.placeholder = method === 'phone' ? 'Номер телефона' : '@username или номер телефона';
 }
 
 function resetPopupFormState() {
@@ -142,6 +142,18 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     if (!isOpen) item.classList.add('open');
   });
 });
+
+// Testimonials
+const testimonialsSection = document.getElementById('testimonials');
+const testimonialsMore = document.querySelector('.testimonials-more');
+
+if (testimonialsSection && testimonialsMore) {
+  testimonialsMore.addEventListener('click', () => {
+    const isExpanded = testimonialsSection.classList.toggle('testimonials-expanded');
+    testimonialsMore.textContent = isExpanded ? 'Скрыть' : 'Показать ещё';
+    testimonialsMore.setAttribute('aria-expanded', String(isExpanded));
+  });
+}
 
 // Reveal on scroll
 const reveals = document.querySelectorAll('.reveal');
