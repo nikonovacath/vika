@@ -38,7 +38,7 @@ nav {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 nav.scrolled { border-bottom-color: var(--border); }
 
@@ -53,10 +53,15 @@ nav.scrolled { border-bottom-color: var(--border); }
 
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 40px;
   list-style: none;
+  margin-left: auto;
 }
 .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
   font-size: 13px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -78,6 +83,7 @@ nav.scrolled { border-bottom-color: var(--border); }
   justify-content: center;
   flex-direction: column;
   gap: 5px;
+  margin-left: 12px;
 }
 
 .nav-burger span {
@@ -765,14 +771,24 @@ nav.mobile-open .mobile-menu {
 /* NAV CTA */
 .nav-cta {
   border: 1px solid var(--border) !important;
-  padding: 8px 16px;
+  padding: 0 16px;
+  height: 40px;
   color: var(--charcoal) !important;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: border-color 0.2s, color 0.2s !important;
 }
 .nav-cta:hover {
   border-color: var(--charcoal) !important;
   color: var(--charcoal) !important;
 }
+.nav-cta-tablet { display: none; }
 
 /* POPUP */
 .popup-overlay {
@@ -1038,11 +1054,19 @@ footer {
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   nav { padding: 20px 24px; }
   .nav-links { display: none; }
   .nav-burger { display: inline-flex; }
+  .nav-cta-tablet {
+    display: inline-flex;
+    margin-left: auto;
+  }
   .mobile-menu { top: 80px; }
+}
+
+@media (max-width: 900px) {
+  nav { padding: 20px 24px; }
   .hero { height: auto; max-height: none; padding: 0 24px; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-left { padding: 120px 0 60px; }
@@ -1096,6 +1120,8 @@ footer {
 }
 
 @media (max-width: 500px) {
+  .nav-cta-tablet { display: none; }
+  .nav-burger { margin-left: auto; }
   #pricing .btn-text-desktop { display: none; }
   #pricing .btn-text-mobile { display: inline; }
 }

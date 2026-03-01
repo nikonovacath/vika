@@ -37,7 +37,7 @@ document.querySelectorAll('.mobile-menu a').forEach(link => {
   link.addEventListener('click', () => closeMobileMenu());
 });
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 900) closeMobileMenu();
+  if (window.innerWidth > 1080) closeMobileMenu();
 });
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeMobileMenu();
