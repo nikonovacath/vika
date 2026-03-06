@@ -328,8 +328,11 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Виктория Анисимова</span>
-    <span>Онлайн-консультации</span>
+    <div class="footer-bottom-main">
+      <span class="footer-bottom-copy">© 2026 Виктория Анисимова</span>
+      <a href="privacy-policy.html" class="footer-bottom-link">Политика обработки персональных данных</a>
+    </div>
+    <span class="footer-bottom-note">Онлайн-консультации</span>
   </div>
 </footer>
 
@@ -368,6 +371,14 @@
       <div class="popup-field">
         <label class="popup-label">С чем хотите поработать? <span class="popup-optional">необязательно</span></label>
         <textarea class="popup-input popup-textarea" id="field-topic" placeholder="Опишите вкратце ваш запрос"></textarea>
+      </div>
+
+      <div class="popup-field popup-field--consent">
+        <label class="popup-consent">
+          <input type="checkbox" id="field-consent">
+          <span>Соглашаюсь с <a href="privacy-policy.html" class="popup-consent-link">политикой обработки персональных данных</a></span>
+        </label>
+        <div class="popup-error">Необходимо принять условия</div>
       </div>
 
       <button class="btn-primary popup-submit" id="popup-submit">Отправить</button>

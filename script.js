@@ -51,6 +51,7 @@ const nameInput = document.getElementById('field-name');
 const contactField = document.getElementById('contact-field');
 const contactInput = document.getElementById('field-contact');
 const topicInput = document.getElementById('field-topic');
+const consentInput = document.getElementById('field-consent');
 const popupSubmitButton = document.getElementById('popup-submit');
 const defaultContactMethod = 'telegram';
 
@@ -64,6 +65,7 @@ function setContactMethod(method) {
 
 function resetPopupFormState() {
   setContactMethod(defaultContactMethod);
+  if (consentInput) consentInput.checked = false;
   clearPopupErrors();
 }
 
@@ -78,7 +80,9 @@ function clearFieldError(input) {
 }
 
 function clearPopupErrors() {
-  [nameInput, contactInput].forEach(input => clearFieldError(input));
+  [nameInput, contactInput, consentInput].forEach(input => {
+    if (input) clearFieldError(input);
+  });
 }
 
 function getActiveContactMethod() {
@@ -122,10 +126,14 @@ resetPopupFormState();
 
 nameInput.addEventListener('input', () => clearFieldError(nameInput));
 contactInput.addEventListener('input', () => clearFieldError(contactInput));
+if (consentInput) {
+  consentInput.addEventListener('change', () => clearFieldError(consentInput));
+}
 
 popupSubmitButton.addEventListener('click', async () => {
   const isNameEmpty = !nameInput.value.trim();
   const isContactEmpty = !contactInput.value.trim();
+  const isConsentMissing = !consentInput || !consentInput.checked;
 
   if (isNameEmpty) setFieldError(nameInput);
   else clearFieldError(nameInput);
@@ -133,7 +141,10 @@ popupSubmitButton.addEventListener('click', async () => {
   if (isContactEmpty) setFieldError(contactInput);
   else clearFieldError(contactInput);
 
-  if (isNameEmpty || isContactEmpty) return;
+  if (isConsentMissing) setFieldError(consentInput);
+  else clearFieldError(consentInput);
+
+  if (isNameEmpty || isContactEmpty || isConsentMissing) return;
 
   const originalButtonText = popupSubmitButton.textContent;
   popupSubmitButton.disabled = true;
