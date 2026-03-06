@@ -1126,6 +1126,12 @@ footer {
   padding: 140px 60px 120px;
 }
 
+.notfound-page .policy-main {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
 .policy-content {
   max-width: 900px;
   margin: 0 auto;

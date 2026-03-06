@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Страница не найдена</title>
+  <meta name="description" content="Страница не найдена. Вернитесь на сайт психолога Виктории Анисимовой.">
+  <meta property="og:title" content="404 — Страница не найдена">
+  <meta property="og:description" content="Страница не найдена. Вернитесь на главную страницу сайта Виктории Анисимовой.">
+  <meta property="og:image" content="https://psyprosvet.ru/img-1.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://psyprosvet.ru/404.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="policy-page notfound-page">
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">В. Анисимова</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">Обо мне</a></li>
+      <li><a href="index.html#services">С чем работаю</a></li>
+      <li><a href="index.html#pricing">Стоимость</a></li>
+      <li><a href="index.html#testimonials">Отзывы</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="#" class="open-popup nav-cta">Записаться на консультацию</a></li>
+    </ul>
+    <a href="#" class="open-popup nav-cta nav-cta-tablet">Записаться на консультацию</a>
+    <button class="nav-burger" id="nav-burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="mobile-menu-links">
+      <li><a href="index.html#about">Обо мне</a></li>
+      <li><a href="index.html#services">С чем работаю</a></li>
+      <li><a href="index.html#pricing">Стоимость</a></li>
+      <li><a href="index.html#testimonials">Отзывы</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="#" class="open-popup">Записаться на консультацию</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="policy-main">
+  <section class="policy-content" style="text-align:center;">
+    <h1 class="policy-title">404</h1>
+    <p style="margin-bottom: 28px;">Страница не найдена. Возможно, адрес введён неверно или страница была перемещена.</p>
+    <a href="index.html" class="btn-primary">На главную</a>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer id="contacts">
+  <div class="footer-top">
+    <div>
+      <div class="footer-name">Виктория Анисимова</div>
+      <div class="footer-tagline">Клиническая и консультативная психология</div>
+    </div>
+    <div class="footer-social">
+      <a href="#" class="footer-social-link">
+        <img src="tg.svg" alt="Telegram"><span>Telegram</span>
+      </a>
+      <a href="#" class="footer-social-link">
+        <img src="yt.svg" alt="YouTube"><span>YouTube</span>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-main">
+      <span class="footer-bottom-copy">© 2026 Виктория Анисимова</span>
+      <a href="privacy-policy.html" class="footer-bottom-link">Политика обработки персональных данных</a>
+    </div>
+    <span class="footer-bottom-note">Онлайн-консультации</span>
+  </div>
+</footer>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="popup">
+  <div class="popup">
+    <button class="popup-close" id="popup-close" aria-label="Закрыть">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="1" y1="1" x2="17" y2="17"/><line x1="17" y1="1" x2="1" y2="17"/>
+      </svg>
+    </button>
+
+    <div class="popup-form" id="popup-form">
+      <h3 class="popup-title">Записаться на консультацию</h3>
+
+      <div class="popup-field">
+        <label class="popup-label">Имя</label>
+        <input type="text" class="popup-input" id="field-name" placeholder="Ваше имя">
+        <div class="popup-error">Заполните поле</div>
+      </div>
+
+      <div class="popup-field popup-field--contact-method">
+        <label class="popup-label">Как с вами удобнее связаться?</label>
+        <div class="popup-toggles">
+          <button class="popup-toggle active" data-value="telegram">Telegram</button>
+          <button class="popup-toggle" data-value="whatsapp">WhatsApp</button>
+          <button class="popup-toggle" data-value="phone">Позвонить</button>
+        </div>
+      </div>
+
+      <div class="popup-field popup-contact-field" id="contact-field" style="display:block;">
+        <input type="text" class="popup-input" id="field-contact" placeholder="@username">
+        <div class="popup-error">Заполните поле</div>
+      </div>
+
+      <div class="popup-field">
+        <label class="popup-label">С чем хотите поработать? <span class="popup-optional">необязательно</span></label>
+        <textarea class="popup-input popup-textarea" id="field-topic" placeholder="Опишите вкратце ваш запрос"></textarea>
+      </div>
+
+      <div class="popup-field popup-field--consent">
+        <label class="popup-consent">
+          <input type="checkbox" id="field-consent">
+          <span>Соглашаюсь с <a href="privacy-policy.html" class="popup-consent-link">политикой обработки персональных данных</a></span>
+        </label>
+        <div class="popup-error">Необходимо принять условия</div>
+      </div>
+
+      <button class="btn-primary popup-submit" id="popup-submit">Отправить</button>
+    </div>
+
+    <div class="popup-success" id="popup-success">
+      <div class="popup-success-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <h3 class="popup-title">Спасибо!</h3>
+      <p class="popup-success-text">Ваша заявка отправлена. Я свяжусь с вами по указанным контактам в течение одного рабочего дня.</p>
+      <button class="btn-outline popup-ok" id="popup-ok">Ок, закрыть</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
